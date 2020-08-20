@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>QUan</title>
+    </head>
+    <body>
+        <form action="" method="POST">
+            <h2> Danh sach users</h2>
+            <ul>
+                {% for user in users %}
+                <li>{{ user }}</li>
+                {% endfor %}
+            </ul>
+            {% csrf_token %}
+            <input name="so1" type="text" placeholder="Nhap vao so a">
+            <input name="so2" type="text" placeholder="Nhap vao so b">
+            <input type="submit">
+        </form>
+        ket qua la : {{ ketqua}}
+    </body>
+</html>
